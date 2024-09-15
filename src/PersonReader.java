@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 
 import static java.nio.file.StandardOpenOption.CREATE;
 
@@ -11,11 +10,6 @@ public class PersonReader {
         JFileChooser chooser = new JFileChooser();
         File selectedFile;
         String rec = "";
-        String ID = "";
-        String firstName = "";
-        String lastName = "";
-        String title = "";
-        int yob = 0;
 
         try {
             File workingDirectory = new File(System.getProperty("user.dir"));
@@ -44,14 +38,11 @@ public class PersonReader {
                                 personInfo[3],
                                 Integer.parseInt(personInfo[4]));
                     }
-
                 }
                 reader.close(); // must close the file to seal it and flush buffer
                 System.out.println("\n\nData file read!");
 
-
-            } else  // User closed the chooser without selecting a file
-            {
+            } else {
                 System.out.println("No file selected!!! ... exiting.\nRun the program again and select a file.");
             }
         }
@@ -65,5 +56,4 @@ public class PersonReader {
             e.printStackTrace();
         }
     }
-
 }

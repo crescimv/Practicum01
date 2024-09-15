@@ -22,7 +22,7 @@ public class ProductWriter {
         String ID;
         String name;
         String description;
-        double cost  = 0;
+        double cost;
 
         do {
             ID = SafeInput.getNonZeroLenString(in, "Enter the ID [6 digits]: ");

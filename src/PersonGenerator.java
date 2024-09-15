@@ -18,14 +18,6 @@ public class PersonGenerator {
 
         boolean done = false;
 
-        /*
-        D (a String)
-        b. FirstName
-        c. LastName
-        d. Title (a string like Mr., Mrs., Ms., Dr., etc.)
-        e. YearOfBirth (an int)
-         */
-
         String personRec;
         String ID;
         String firstName;
